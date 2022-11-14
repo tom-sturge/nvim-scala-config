@@ -17,15 +17,13 @@ call plug#end()
 
 
 " NerdTree -------------------
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-let g:NERDTreeIgnore = []
-let g:NERDTreeStatusline = ''
+" " Start NERDTree. If a file is specified, move the cursor to its window.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " Toggle
-nnoremap <silent> <C-b> :NERDTreeToggle<CR>
-
+nnoremap <silent> <C-;> :NERDTreeToggle<CR>
 
 " ColorScheme
 
@@ -59,7 +57,7 @@ set relativenumber             " Show relative line numbers
 " Your search will be case sensitive if it contains an uppercase letter
 set smartcase
 
-" use alt+hjkl to move between split/vsplit panels
+" use ctrl+hjkl to move between split/vsplit panels
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
