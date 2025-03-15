@@ -27,6 +27,9 @@ return {
             }
 
           }
+        },
+        defaults = {
+          file_ignore_patterns = { "project/", "target/" }
         }
       })
       require("telescope").load_extension("ui-select")
