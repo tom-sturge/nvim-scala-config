@@ -79,10 +79,6 @@ A modern NeoVim setup focused on Scala development with full LSP support and qua
 - **`[c`** - Previous diagnostic
 - **`]c`** - Next diagnostic
 
-### Which Key
-
-- **`Space (hold)`** - Show available keybindings
-
 ## Tips and Tricks
 
 - Use **Which Key** by holding the space key to discover available commands.
