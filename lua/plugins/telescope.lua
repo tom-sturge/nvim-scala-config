@@ -29,7 +29,7 @@ return {
           }
         },
         defaults = {
-          file_ignore_patterns = { "project/", "target/" }
+          file_ignore_patterns = { "project/", "target/", "node_modules/"}
         }
       })
       require("telescope").load_extension("ui-select")
